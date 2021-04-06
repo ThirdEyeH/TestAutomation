@@ -10,8 +10,6 @@ import java.util.Map;
 
 public class CreateNotificationNote {
 
-
-
     CreateNotePage createNotePage = new CreateNotePage();
     LoginPage loginPage = new LoginPage();
     CreateNotificationNotePage createNotificationNotePage = new CreateNotificationNotePage();
