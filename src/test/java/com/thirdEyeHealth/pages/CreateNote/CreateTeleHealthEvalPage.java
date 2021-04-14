@@ -46,6 +46,9 @@ public class CreateTeleHealthEvalPage extends BasePage {
     @FindBy(xpath = "//table[@id='datatable']//tr[1]/td[5]")
     private WebElement datatableDT;
 
+    @FindBy(xpath = "(//input[@type='checkbox'])[9]")
+    private WebElement NotifyTEHcheckBx;
+
 
     public void setPrimaryChiefComplaintDropdown(String name){
         Select select= new Select(primaryChiefComplaintDropdown);
@@ -100,7 +103,9 @@ public class CreateTeleHealthEvalPage extends BasePage {
         System.out.println("actual text of Note type : "+text);
 
         return text;
-
+    }
+    public void clickNotifyTEHBx(){
+        BrowserUtils.clickOnElement(NotifyTEHcheckBx);
     }
 
 

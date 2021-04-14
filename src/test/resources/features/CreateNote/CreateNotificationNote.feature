@@ -7,7 +7,7 @@ Scenario: after user able to create consult, user able to create note
   When user logs in
   Then user navigate to "Consult Requests" from the top most menu
   * clicks the green Add Consult Request button
-  * select facility "ThirdEyeHealth - Technical Support"
+  * select facility "AdvancedHealthcareSolutions - Bowie*"
   * user select any nurse, patient, chief complaint, and clinician
   * user should be able to click Create Consult Request
   * click the cancel button

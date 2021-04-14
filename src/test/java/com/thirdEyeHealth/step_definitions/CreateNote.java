@@ -55,6 +55,10 @@ public class CreateNote {
     public void enter_on_assessment_plan_box(String text) {
         createNotePage.Entertext_assessment_planTextBox(text);
     }
+    @Then("click Notify TEH checkBox on followUp")
+    public void click_notify_teh_check_box_on_follow_up() {
+     createNotePage.ClickNotifyTEHbx();
+    }
 
     @Then("select any from Disposition")
     public void select_any_from_disposition() {

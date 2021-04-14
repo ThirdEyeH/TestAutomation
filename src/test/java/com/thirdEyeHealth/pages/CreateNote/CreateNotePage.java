@@ -71,6 +71,9 @@ public class CreateNotePage extends BasePage {
     @FindBy(xpath = "//table[@id='datatable']//tr[1]/td[3]")
     private WebElement chiefComplaint;
 
+    @FindBy(xpath = "(//input[@type='checkbox'])[3]")
+    private WebElement notifyTEHBx;
+
     public void SelectANote(String FollowUpNote){
         Select select= new Select(selectANoteDropdown);
         select.selectByVisibleText(FollowUpNote);
@@ -150,7 +153,9 @@ public class CreateNotePage extends BasePage {
 
         return text;
 
-
+    }
+    public void ClickNotifyTEHbx(){
+        BrowserUtils.clickOnElement(notifyTEHBx);
     }
 
 

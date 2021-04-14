@@ -1,14 +1,7 @@
-Feature: create follow up note
-  user story: user should able to create follow up note after create consult 
-# this is a comment
-#Background - test pre-condition
 
-#  will be executed before every scenario in the particular feature file
-
-
-
-  @CreateFollowUpNote
-  Scenario: when clinician login with valid credential, user able to create consult and follow up note
+@signNote
+Feature: the clinician sign follow up note
+  Scenario: after user created follow up note, user able to sign the note
     Given user on the log in page
     When user logs in
     Then user navigate to "Consult Requests" from the top most menu
@@ -35,23 +28,16 @@ Feature: create follow up note
     * enter any number on Total time of encounter including connectivity box
     * click the save button
     * Then user verifies that new note is displayed
+    Given user click View Note on the first row of datatable
+    When user on sign note page and click sign green button
+    And click Ok on popup alert
+    * click Ok again on second popup
+    Then user verifies that signed is displayed
 
-   # @signFollowUpNote
 
 
-   #* click Notify TEH of any change in condition radio button
-   #
-   #
-     # *
-    #*
-    #Then user should be able to see view note available on the table
- #
 
-  #
-  #
- # * on the Vital Signs box enter
- #      | T: 98
- #      | BP:
- #      | HR:
- #      | RR:
- #      | SpO2:
+
+
+
+

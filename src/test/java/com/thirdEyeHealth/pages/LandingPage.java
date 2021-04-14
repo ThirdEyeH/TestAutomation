@@ -17,10 +17,10 @@ public class LandingPage extends BasePage{
     @FindBy(css="select[id='ddlchatuserfacility']")
     private WebElement selectFacilityDropdown;
 
-    @FindBy(xpath = "//table[@id='chatusers']//tr[2]/td[1]/label")
+    @FindBy(xpath = "//table[@id='chatusers']//tr[1]/td[1]/label")
     private WebElement selectNurse;
 
-    @FindBy(xpath = "//table[@id='patients']//tr[2]/td[1]/label")
+    @FindBy(xpath = "//table[@id='patients']//tr[3]/td[1]/label")
     private WebElement selectPatient;
 
     @FindBy(xpath = "//select[@id='ddlchiefcomplaints']")

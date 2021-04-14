@@ -39,6 +39,7 @@ public class CreateConsult {
 
     @When("select facility {string}")
     public void select_facility(String string) {
+
         landingPage.selectFacility(string);
     }
 

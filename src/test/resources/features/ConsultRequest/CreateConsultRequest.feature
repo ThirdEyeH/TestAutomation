@@ -14,7 +14,7 @@ Feature: As a user I want to be able to create consult request
     When user logs in
     Then user navigate to "Consult Requests" from the top most menu
     * clicks the green Add Consult Request button
-    * select facility "ThirdEyeHealth - Technical Support"
+    * select facility "AdvancedHealthcareSolutions - Bowie*"
     * user select any nurse, patient, chief complaint, and clinician
     * user should be able to click Create Consult Request
     * click the cancel button

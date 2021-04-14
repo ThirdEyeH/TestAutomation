@@ -1,8 +1,6 @@
 package com.thirdEyeHealth.utilies;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -61,15 +59,34 @@ public class BrowserUtils {
         js.executeScript("window.scrollBy(0,"+ pixelNum + ")");
     }
 
-    public static void scrollIntoView(String xpathLocator){
+    public static void scrollIntoView(String xpathLocator) {
 
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
-        JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
 
     }
-    public static void acceptAlert(){
-
+    public static void acceptBrowserAlert(WebDriver driver) {
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+    }
+    //this is method to decline browser alert.
+    public static void declineBrowserAlert(WebDriver driver) {
+        Alert alert = driver.switchTo().alert();
+        alert.dismiss();
     }
 
+    // get alert text
+    public static String getBrowserAlertText(WebDriver driver){
+        try {
+            Alert alert = driver.switchTo().alert();
+            String alertText = alert.getText();
+            return alertText;
+        } catch (Exception e) {
+            System.out.println("no browser alert showing");
+        }
+        return null;
+    }
 }
+
+

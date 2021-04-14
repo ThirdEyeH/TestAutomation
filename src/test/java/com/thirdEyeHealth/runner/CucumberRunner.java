@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         },
         glue = "com/thirdEyeHealth/step_definitions",
         dryRun =false,
-        tags = "@CreateFollowUpNote"
+        tags = "@signTeleNote"
         //publish = true
 
 )

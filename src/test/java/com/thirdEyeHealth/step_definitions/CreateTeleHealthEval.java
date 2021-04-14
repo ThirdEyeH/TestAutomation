@@ -42,7 +42,10 @@ public class CreateTeleHealthEval {
     public void select_from_physical_exam_dropdown(String string) {
      createTeleHealthEvalPage.selectphysicalExamDropD(string);
     }
-
+    @Then("click Notify TEH checkBox on TeleNote")
+    public void click_notify_teh_check_box_on_tele_note() {
+     createTeleHealthEvalPage.clickTEHBx();
+    }
     @Then("enter any on Exam findings per nurse, Diagnostic Results boxs")
     public void enter_any_on_exam_findings_per_nurse_diagnostic_results_boxs(Map<String, String> dataTable) {
        String examFindingsPerNurse = dataTable.get("Exam findings per nurse");
