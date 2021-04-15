@@ -1,6 +1,7 @@
 Feature: As a clinician I want to be able to create note
 
-  @CreateNotificationNote
+
+  @signNotificationNote
   Scenario: after user able to create consult, user able to create note
     Given user on the log in page
     When user logs in
@@ -25,3 +26,8 @@ Feature: As a clinician I want to be able to create note
     * enter any number on Total time of encounter including connectivity box
     * click the save button
     Then user verifies that new note is displayed
+    Given user click View Note on the first row of datatable
+    When user on sign note page and click sign green button
+    And click Ok on popup alert
+    * click Ok again on second popup
+    Then user verifies that signed is displayed in telenote
