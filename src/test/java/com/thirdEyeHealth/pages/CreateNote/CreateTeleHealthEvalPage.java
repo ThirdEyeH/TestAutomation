@@ -105,6 +105,7 @@ public class CreateTeleHealthEvalPage extends BasePage {
         return text;
     }
     public void clickNotifyTEHBx(){
+
         BrowserUtils.clickOnElement(NotifyTEHcheckBx);
     }
 

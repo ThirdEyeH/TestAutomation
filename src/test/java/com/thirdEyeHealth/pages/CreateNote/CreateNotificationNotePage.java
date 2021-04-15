@@ -76,12 +76,10 @@ public class CreateNotificationNotePage extends BasePage {
 
         String xpathResetAllFilters = "//a[@class='btn btn-lg btn-warning btn-block']";
         BrowserUtils.scrollIntoView(xpathResetAllFilters);
-
         BrowserUtils.waitVisibilityOfElement(chiefComplaitData);
 
         String text = chiefComplaitData.getText();
         System.out.println("actual text of chief complaint is " + text);
-
         return text;
 
 
